@@ -34,7 +34,7 @@ def get_authorize_callback(endpoint, provider_id):
     """
     endpoint_prefix = config_value('BLUEPRINT_NAME')
     url = url_for(endpoint_prefix + '.' + endpoint, provider_id=provider_id)
-    return request.url_root[:-1] + url
+    return "https://bot.ratina.io/connect/facebook"
 
 
 def get_connection_values_from_oauth_response(provider, oauth_response):
